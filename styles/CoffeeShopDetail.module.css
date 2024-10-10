@@ -1,0 +1,76 @@
+.detailCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+.shopName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--apple-text);
+}
+
+.address {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.hours {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.status {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.open {
+  color: #34c759;
+}
+
+.closed {
+  color: #ff3b30;
+}
+
+.rating {
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #ff9500;
+  margin-right: 4px;
+}
+
+.ratingCount {
+  font-size: 12px;
+  color: #666;
+}
+
+.website {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--apple-blue);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.website:hover {
+  text-decoration: underline;
+}

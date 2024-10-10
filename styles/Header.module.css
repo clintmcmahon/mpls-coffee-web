@@ -1,0 +1,20 @@
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.brand {
+  font-weight: 600;
+  color: var(--apple-blue) !important;
+}
+
+.navLink {
+  color: var(--apple-text) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--apple-blue) !important;
+}

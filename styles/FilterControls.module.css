@@ -1,0 +1,21 @@
+.filterContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  font-size: 14px;
+  color: #333;
+}
+
+.filterLabel input[type="checkbox"] {
+  margin-right: 8px;
+}

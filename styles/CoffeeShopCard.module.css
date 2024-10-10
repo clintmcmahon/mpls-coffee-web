@@ -1,0 +1,78 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.hours {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.open {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.closed {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.distance {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.ratingValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffa000;
+  margin-right: 4px;
+}
+
+.ratingCount {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.website {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.website:hover {
+  text-decoration: underline;
+}

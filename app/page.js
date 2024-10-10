@@ -1,95 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useState, useEffect } from "react";
+import Map from "../components/Map";
+import CoffeeShopList from "../components/CoffeeShopList";
+import FilterControls from "../components/FilterControls";
+import useGeolocation from "../hooks/useGeolocation";
+import { fetchCoffeeShops } from "../utils/api";
+import styles from "../styles/Page.module.css"; // Add this line
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [coffeeShops, setCoffeeShops] = useState([]);
+  const [filters, setFilters] = useState({ openNow: false, goodCoffee: false });
+  const userLocation = useGeolocation();
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  useEffect(() => {
+    async function loadCoffeeShops() {
+      if (userLocation.latitude && userLocation.longitude) {
+        const shops = await fetchCoffeeShops(
+          userLocation.latitude,
+          userLocation.longitude
+        );
+        setCoffeeShops(shops);
+      }
+    }
+    loadCoffeeShops();
+  }, [userLocation]);
+
+  const filteredShops = coffeeShops.filter((shop) => {
+    if (filters.openNow && !shop.isOpenNow) return false;
+    if (filters.goodCoffee && !shop.isGood) return false;
+    return true;
+  });
+
+  return (
+    <main className={styles.main}>
+      <FilterControls filters={filters} setFilters={setFilters} />
+      <div className={styles.contentWrapper}>
+        <Map coffeeShops={filteredShops} userLocation={userLocation} />
+        <CoffeeShopList
+          coffeeShops={filteredShops}
+          userLocation={userLocation}
+        />
+      </div>
+    </main>
   );
 }
