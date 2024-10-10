@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from "react";
-import Map from "../components/Map";
-import FilterControls from "../components/FilterControls";
-import useGeolocation from "../hooks/useGeolocation";
-import { fetchCoffeeShops } from "../utils/api";
-import styles from "../styles/Page.module.css";
+import { useState, useEffect } from 'react';
+import CoffeeShopList from '../../components/CoffeeShopList';
+import FilterControls from '../../components/FilterControls';
+import useGeolocation from '../../hooks/useGeolocation';
+import { fetchCoffeeShops } from '../../utils/api';
+import styles from '../../styles/List.module.css';
 
-export default function MapPage() {
+export default function ListPage() {
   const [coffeeShops, setCoffeeShops] = useState([]);
   const [filters, setFilters] = useState({ openNow: false, goodCoffee: false });
   const userLocation = useGeolocation();
@@ -33,12 +33,12 @@ export default function MapPage() {
   };
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.filterControls}>
+    <div className={styles.container}>
+      <header className={styles.header}>
         <FilterControls filters={filters} onFilterChange={handleFilterChange} />
-      </div>
-      <main className={styles.mainContent}>
-        <Map
+      </header>
+      <main className={styles.main}>
+        <CoffeeShopList
           coffeeShops={coffeeShops}
           userLocation={userLocation}
           filters={filters}

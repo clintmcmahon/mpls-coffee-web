@@ -2,7 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/globals.css";
 import Header from "../components/Header";
-
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 export const metadata = {
   title: "MPLS Coffee",
   description: "Find the best coffee shops in Minneapolis",

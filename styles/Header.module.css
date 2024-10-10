@@ -1,20 +1,32 @@
 .header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
 
 .brand {
-  font-weight: 600;
-  color: var(--apple-blue) !important;
+  font-weight: 700;  /* Increased weight for more prominence */
+  color: var(--apple-black) !important;
+  text-decoration: none;
+}
+
+.brandText {
+  font-size: 1.5rem;  /* Larger font size for the brand */
+  letter-spacing: -0.5px;  /* Tighter letter spacing for a sleek look */
 }
 
 .navLink {
-  color: var(--apple-text) !important;
+  color: var(--apple-gray-dark) !important;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navLink:hover {
-  color: var(--apple-blue) !important;
+  color: var(--apple-black) !important;
+}
+
+/* Add a subtle hover effect to the brand */
+.brand:hover .brandText {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }

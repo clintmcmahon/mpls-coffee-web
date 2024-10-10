@@ -7,22 +7,52 @@
 }
 
 .markerBtn {
-  background-color: var(--apple-blue);
-  border: 2px solid white;
+  background-color: var(--apple-white);
+  border: 2px solid var(--apple-gray-medium);
   border-radius: 50%;
   cursor: pointer;
-  padding: 4px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .markerBtn:hover {
   transform: scale(1.1);
+}
+
+.markerBtn svg {
+  color: var(--apple-gray-medium);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.markerBtn.openNow {
+  border-color: #34C759;  /* Apple's green color */
+}
+
+.markerBtn.openNow svg {
+  color: #34C759;
+}
+
+.markerBtn.goodCoffee {
+  background-color: var(--apple-gray-light);
+}
+
+.markerBtn.goodCoffee svg {
+  color: var(--apple-black);
+}
+
+.markerBtn.openNow.goodCoffee {
+  border-color: #34C759;
+  background-color: var(--apple-gray-light);
+}
+
+.markerBtn.openNow.goodCoffee svg {
+  color: #34C759;
 }
 
 .userLocationMarker {

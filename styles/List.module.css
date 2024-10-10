@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F5F5F7; /* Light gray background similar to the screenshot */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+  }

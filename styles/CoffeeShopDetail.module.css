@@ -1,5 +1,5 @@
 .detailCard {
-  background-color: white;
+  background-color: var(--apple-white);
   border-radius: 12px;
   padding: 16px;
   width: 280px;
@@ -15,25 +15,26 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: #999;
+  color: var(--apple-gray-medium);
 }
 
 .shopName {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--apple-text);
+  color: var(--apple-black);
 }
 
 .address {
   font-size: 14px;
-  color: #666;
+  color: var(--apple-gray-dark);
   margin-bottom: 8px;
 }
 
 .hours {
   font-size: 14px;
   margin-bottom: 4px;
+  color: var(--apple-gray-dark);
 }
 
 .status {
@@ -42,11 +43,11 @@
 }
 
 .open {
-  color: #34c759;
+  color: var(--apple-black);
 }
 
 .closed {
-  color: #ff3b30;
+  color: var(--apple-gray-medium);
 }
 
 .rating {
@@ -54,13 +55,13 @@
 }
 
 .stars {
-  color: #ff9500;
+  color: var(--apple-black);
   margin-right: 4px;
 }
 
 .ratingCount {
   font-size: 12px;
-  color: #666;
+  color: var(--apple-gray-medium);
 }
 
 .website {

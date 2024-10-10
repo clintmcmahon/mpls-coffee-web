@@ -1,11 +1,10 @@
-import styles from "../styles/FilterControls.module.css";
+import React from 'react';
+import styles from '../styles/FilterControls.module.css';
 
-export default function FilterControls({ filters, setFilters }) {
-  const handleFilterChange = (filterName) => {
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [filterName]: !prevFilters[filterName],
-    }));
+const FilterControls = ({ filters, onFilterChange }) => {
+  const handleFilterChange = (event) => {
+    const { name, checked } = event.target;
+    onFilterChange(name, checked);
   };
 
   return (
@@ -13,19 +12,23 @@ export default function FilterControls({ filters, setFilters }) {
       <label className={styles.filterLabel}>
         <input
           type="checkbox"
-          checked={filters.openNow}
-          onChange={() => handleFilterChange("openNow")}
+          name="openNow"
+          checked={filters.openNow || false}
+          onChange={handleFilterChange}
         />
         Open Now
       </label>
       <label className={styles.filterLabel}>
         <input
           type="checkbox"
-          checked={filters.goodCoffee}
-          onChange={() => handleFilterChange("goodCoffee")}
+          name="goodCoffee"
+          checked={filters.goodCoffee || false}
+          onChange={handleFilterChange}
         />
         Good Coffee
       </label>
     </div>
   );
-}
+};
+
+export default FilterControls;
