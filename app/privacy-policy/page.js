@@ -1,0 +1,53 @@
+// /app/privacy-policy/page.js
+
+export const metadata = {
+  title: "Privacy Policy | MPLS Coffee",
+  description:
+    "Read MPLS Coffee's privacy policy. We do not track or store any user data.",
+};
+
+const PrivacyPolicy = () => {
+  return (
+    <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
+      <h1>Privacy Policy for MPLS Coffee</h1>
+      <p>
+        <strong>Last Updated: 10/04/2024</strong>
+      </p>
+
+      <p>
+        At MPLS Coffee, we are committed to protecting your privacy. This
+        Privacy Policy outlines the types of information we do and do not
+        collect from users who visit our website.
+      </p>
+
+      <h2>Information We Do Not Collect</h2>
+      <p>
+        MPLS Coffee does not collect, track, or store any personal information
+        or data from visitors to our website. We do not use cookies, analytics
+        tools, or any other tracking mechanisms to gather information about our
+        users.
+      </p>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        Since MPLS Coffee does not collect or store any user data, we also do
+        not share any information with third-party services. We prioritize your
+        privacy by ensuring that your visit to our website remains anonymous and
+        untracked.
+      </p>
+
+      <h2>Changes to This Privacy Policy</h2>
+      <p>
+        MPLS Coffee may update this Privacy Policy from time to time. Any
+        changes will be posted on this page with an updated revision date.
+      </p>
+
+      <p>
+        If you have any questions or concerns about our Privacy Policy, please
+        contact us at hello@mplscoffee.com.
+      </p>
+    </div>
+  );
+};
+
+export default PrivacyPolicy;
