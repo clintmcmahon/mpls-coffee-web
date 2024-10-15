@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Map from "../components/Map";
 import FilterControls from "../components/FilterControls";
 import useGeolocation from "../hooks/useGeolocation";
 import { fetchCoffeeShops } from "../utils/api";
-import styles from "../styles/Page.module.css";
+import styles from "../styles/page.module.css";
 
 export default function MapPage() {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -26,9 +26,9 @@ export default function MapPage() {
   }, [userLocation]);
 
   const handleFilterChange = (filterName, isChecked) => {
-    setFilters(prevFilters => ({
+    setFilters((prevFilters) => ({
       ...prevFilters,
-      [filterName]: isChecked
+      [filterName]: isChecked,
     }));
   };
 
