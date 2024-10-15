@@ -15,6 +15,7 @@ export default function ListPage() {
   useEffect(() => {
     async function loadCoffeeShops() {
       if (userLocation.latitude && userLocation.longitude) {
+        console.log('Starting fetch coffee shops');
         const shops = await fetchCoffeeShops(
           userLocation.latitude,
           userLocation.longitude
@@ -23,7 +24,7 @@ export default function ListPage() {
       }
     }
     loadCoffeeShops();
-  }, [userLocation]);
+  }, []);
 
   const handleFilterChange = (filterName, isChecked) => {
     setFilters(prevFilters => ({

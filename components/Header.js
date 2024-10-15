@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={`${styles.header} navbar navbar-expand-lg navbar-light bg-white`}>
       <div className="container-fluid">
-        <a className={`${styles.brand} navbar-brand`} href="#">
+        <a className={`${styles.brand} navbar-brand`} href="/">
           <span className={styles.brandText}>MPLS Coffee</span>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

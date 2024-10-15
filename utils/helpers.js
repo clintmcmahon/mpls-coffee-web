@@ -26,6 +26,17 @@ function deg2rad(deg) {
 }
 
 /**
+ * Calculates distances from a reference point to multiple locations and returns them sorted by distance.
+ * @param {number} referenceLat - Latitude of the reference point
+ * @param {number} referenceLon - Longitude of the reference point
+ * @param {Array<{lat: number, lon: number}>} locations - Array of locations
+ * @returns {Array<{distance: number, lat: number, lon: number}>} Sorted distances
+ */
+export function calculateDistances(referenceLat, referenceLon, locations) {
+  return locations.sort((a, b) => a.distance - b.distance);
+}
+
+/**
  * Formats a distance for display.
  * @param {number|string} distance - Distance in miles
  * @returns {string} Formatted distance string

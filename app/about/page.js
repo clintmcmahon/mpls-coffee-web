@@ -7,7 +7,7 @@ import styles from '../../styles/About.module.css';
 
 const AboutPage = () => {
   const handleEmailPress = () => {
-    window.location.href = "mailto:info@parkasoftware.com";
+    window.location.href = "mailto:hello@mplscoffee.com";
   };
 
   return (
@@ -25,7 +25,7 @@ const AboutPage = () => {
 
         <h2 className={styles.sectionTitle}>Features</h2>
         <ul className={styles.featureList}>
-          <li>Interactive map of coffee shops in Minneapolis</li>
+          <li>Interactive map of coffee shops in Minneapolis and Saint Paul</li>
           <li>Detailed information on each coffee shop</li>
           <li>User ratings and reviews</li>
           <li>Open hours and contact details</li>
@@ -62,7 +62,7 @@ const AboutPage = () => {
         <h2 className={styles.sectionTitle}>Contact Us</h2>
         <button className={styles.contactButton} onClick={handleEmailPress}>
           <FontAwesomeIcon icon={faEnvelope} />
-          <span>info@parkasoftware.com</span>
+          <span>hello@mplscoffee.com</span>
         </button>
         <p className={styles.text}>
           We'd love to hear your feedback, suggestions, or any questions you

@@ -1,11 +1,11 @@
 import axios from "axios";
-
+import { calculateDistance, calculateDistances } from "./helpers";
 const API_URL = "https://api.mplscoffee.com/odata/coffeeshops";
 
 export async function fetchCoffeeShops(latitude, longitude) {
   try {
     const response = await axios.get(`${API_URL}?$expand=hours`);
-    return response.data.value.map((shop) => ({
+    const coffeeShops = response.data.value.map((shop) => ({
       ...shop,
       isOpenNow: isShopOpenNow(shop),
       hoursToday: getHoursToday(shop),
@@ -16,6 +16,10 @@ export async function fetchCoffeeShops(latitude, longitude) {
         shop.longitude
       ),
     }));
+
+    const sortedDistances = calculateDistances(latitude, longitude, coffeeShops);
+    return sortedDistances;
+
   } catch (error) {
     console.error("Error fetching coffee shops:", error);
     return [];

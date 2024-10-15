@@ -2,12 +2,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/globals.css";
 import Header from "../components/Header";
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+config.autoAddCss = false;
+
 export const metadata = {
-  title: "MPLS Coffee",
-  description: "Find the best coffee shops in Minneapolis",
+  title: 'MPLS Coffee - Discover the Best Coffee in Minneapolis & St. Paul',
+  description: 'Your ultimate guide to exploring the coffee shops in Minneapolis and St. Paul. Find the best coffee shops, read reviews, and discover unique brews.',
 };
 
 export default function RootLayout({ children }) {
@@ -18,6 +20,10 @@ export default function RootLayout({ children }) {
           href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
           rel="stylesheet"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </head>
       <body>
         <div className="app-container">
