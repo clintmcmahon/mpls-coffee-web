@@ -1,31 +1,54 @@
-import React from 'react';
-import styles from '../styles/Header.module.css';
+import React from "react";
+import styles from "../styles/Header.module.css";
 
 const Header = () => {
   return (
-    <header className={`${styles.header} navbar navbar-expand-lg navbar-light bg-white`}>
-      <div className="container-fluid">
-        <a className={`${styles.brand} navbar-brand`} href="/">
-          <span className={styles.brandText}>MPLS Coffee</span>
+    <nav
+      className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
+      id="mainNav"
+    >
+      <div className="container px-5">
+        <a className="navbar-brand fw-bold" href="#page-top">
+          MPLS Coffee
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i className="bi-list"></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
             <li className="nav-item">
-              <a className={`${styles.navLink} nav-link`} href="/">Map</a>
+              <a className="nav-link me-lg-3" href="#features">
+                Features
+              </a>
             </li>
             <li className="nav-item">
-              <a className={`${styles.navLink} nav-link`} href="/list">List</a>
-            </li>
-            <li className="nav-item">
-              <a className={`${styles.navLink} nav-link`} href="/about">About</a>
+              <a className="nav-link me-lg-3" href="#download">
+                Download
+              </a>
             </li>
           </ul>
+          <button
+            className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
+            data-bs-toggle="modal"
+            data-bs-target="#feedbackModal"
+          >
+            <span className="d-flex align-items-center">
+              <i className="bi-chat-text-fill me-2"></i>
+              <span className="small">Send Feedback</span>
+            </span>
+          </button>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 

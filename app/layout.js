@@ -1,15 +1,15 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/globals.css";
 import Header from "../components/Header";
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
 
 export const metadata = {
-  title: 'MPLS Coffee - Discover the Best Coffee in Minneapolis & St. Paul',
-  description: 'Your ultimate guide to exploring the coffee shops in Minneapolis and St. Paul. Find the best coffee shops, read reviews, and discover unique brews.',
+  title: "MPLS Coffee - Discover the Best Coffee in Minneapolis & St. Paul",
+  description:
+    "Your ultimate guide to exploring the coffee shops in Minneapolis and St. Paul. Find the best coffee shops and discover unique brews.",
 };
 
 export default function RootLayout({ children }) {
@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.ico" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body>
+      <body id="page-top">
         <div className="app-container">
           <Header />
           <main className="main-content">{children}</main>
