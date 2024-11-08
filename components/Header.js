@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Header.module.css";
 
 const Header = () => {
   return (
@@ -8,7 +7,7 @@ const Header = () => {
       id="mainNav"
     >
       <div className="container px-5">
-        <a className="navbar-brand fw-bold" href="#page-top">
+        <a className="navbar-brand fw-bold" href="/#page-top">
           MPLS Coffee
         </a>
         <button
@@ -26,26 +25,33 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link me-lg-3" href="#features">
+              <a className="nav-link me-lg-3" href="/#features">
                 Features
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link me-lg-3" href="#download">
+              <a className="nav-link me-lg-3" href="/#download">
                 Download
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link me-lg-3" href="/about">
+                About MPLS Coffee
+              </a>
+            </li>
           </ul>
-          <button
-            className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
-            data-bs-toggle="modal"
-            data-bs-target="#feedbackModal"
-          >
-            <span className="d-flex align-items-center">
-              <i className="bi-chat-text-fill me-2"></i>
-              <span className="small">Send Feedback</span>
-            </span>
-          </button>
+          <a href="mailto:hello@mplscoffee.com?subject=Coffee, coffee, coffee">
+            <button
+              className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
+              data-bs-toggle="modal"
+              data-bs-target="#feedbackModal"
+            >
+              <span className="d-flex align-items-center">
+                <i className="bi-chat-text-fill me-2"></i>
+                <span className="small">Contact!</span>
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </nav>

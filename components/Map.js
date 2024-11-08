@@ -1,16 +1,16 @@
-import { useState, useCallback, useRef, useMemo } from 'react';
-import Map, { Marker, Popup, NavigationControl } from 'react-map-gl';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMugSaucer } from '@fortawesome/free-solid-svg-icons';
-import CoffeeShopDetail from './CoffeeShopDetail';
-import HoverInfo from './HoverInfo';
-import styles from '../styles/Map.module.css';
+import { useState, useCallback, useRef, useMemo } from "react";
+import Map, { Marker, Popup, NavigationControl } from "react-map-gl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
+import CoffeeShopDetail from "./CoffeeShopDetail";
+import HoverInfo from "./HoverInfo";
+import styles from "../styles/Map.module.css";
 
 export default function MapComponent({ coffeeShops, userLocation, filters }) {
   const [viewState, setViewState] = useState({
-    longitude: userLocation?.longitude || -93.2650,
+    longitude: userLocation?.longitude || -93.265,
     latitude: userLocation?.latitude || 44.9778,
-    zoom: 13
+    zoom: 13,
   });
   const [selectedShop, setSelectedShop] = useState(null);
   const [hoveredShop, setHoveredShop] = useState(null);
@@ -31,7 +31,7 @@ export default function MapComponent({ coffeeShops, userLocation, filters }) {
   }, []);
 
   const filteredShops = useMemo(() => {
-    return coffeeShops.filter(shop => {
+    return coffeeShops.filter((shop) => {
       if (filters.openNow && !shop.isOpenNow) return false;
       if (filters.goodCoffee && !shop.isGood) return false;
       return true;
@@ -42,13 +42,13 @@ export default function MapComponent({ coffeeShops, userLocation, filters }) {
     <div className={styles.mapWrapper} ref={mapRef}>
       <Map
         {...viewState}
-        onMove={evt => setViewState(evt.viewState)}
-        style={{width: '100%', height: '100%'}}
+        onMove={(evt) => setViewState(evt.viewState)}
+        style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
       >
         <NavigationControl position="top-right" />
-        
+
         {filteredShops.map((shop) => (
           <Marker
             key={shop.placeId}
@@ -60,8 +60,10 @@ export default function MapComponent({ coffeeShops, userLocation, filters }) {
               handleMarkerClick(shop);
             }}
           >
-            <div 
-              className={`${styles.markerBtn} ${shop.isOpenNow ? styles.openNow : ''} ${shop.isGood ? styles.goodCoffee : ''}`}
+            <div
+              className={`${styles.markerBtn} ${
+                shop.isOpenNow ? styles.openNow : ""
+              } ${shop.isGood ? styles.goodCoffee : ""}`}
               onMouseEnter={(e) => handleMarkerHover(shop, e)}
               onMouseLeave={handleMarkerLeave}
             >
@@ -89,13 +91,14 @@ export default function MapComponent({ coffeeShops, userLocation, filters }) {
             closeButton={false}
             closeOnClick={false}
           >
-            <CoffeeShopDetail shop={selectedShop} onClose={() => setSelectedShop(null)} />
+            <CoffeeShopDetail
+              shop={selectedShop}
+              onClose={() => setSelectedShop(null)}
+            />
           </Popup>
         )}
       </Map>
-      {hoveredShop && (
-        <HoverInfo shop={hoveredShop} position={hoverPosition} />
-      )}
+      {hoveredShop && <HoverInfo shop={hoveredShop} position={hoverPosition} />}
     </div>
   );
 }

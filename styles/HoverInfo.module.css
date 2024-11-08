@@ -1,31 +1,31 @@
 .hoverInfo {
-    background-color: var(--apple-white);
-    border: 1px solid var(--apple-gray-light);
-    border-radius: 8px;
-    padding: 8px 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 1000;
-  }
-  
-  .shopName {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--apple-black);
-    margin: 0 0 4px 0;
-  }
-  
-  .shopRating {
-    font-size: 12px;
-    color: var(--apple-gray-dark);
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .shopRating svg {
-    color: #FFD700;
-    margin-right: 4px;
-    font-size: 12px;
-  }
+  background-color: #fff;
+  border: 1px solid var(--apple-gray-light);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.shopName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--apple-black);
+  margin: 0 0 4px 0;
+}
+
+.shopRating {
+  font-size: 12px;
+  color: var(--apple-gray-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.shopRating svg {
+  color: #ffd700;
+  margin-right: 4px;
+  font-size: 12px;
+}

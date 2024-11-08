@@ -2972,19 +2972,19 @@ fieldset:disabled .btn {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #2937f0;
-  --bs-btn-border-color: #2937f0;
+  --bs-btn-bg: #193538;
+  --bs-btn-border-color: #193538;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #232fcc;
-  --bs-btn-hover-border-color: #212cc0;
+  --bs-btn-hover-bg: #193538;
+  --bs-btn-hover-border-color: #193538;
   --bs-btn-focus-shadow-rgb: 73, 85, 242;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212cc0;
-  --bs-btn-active-border-color: #1f29b4;
+  --bs-btn-active-bg: #193538;
+  --bs-btn-active-border-color: #193538;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #2937f0;
-  --bs-btn-disabled-border-color: #2937f0;
+  --bs-btn-disabled-bg: #193538;
+  --bs-btn-disabled-border-color: #193538;
 }
 
 .btn-secondary {
@@ -11177,7 +11177,7 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;
+  background: linear-gradient(45deg, #193538, #3f9188) !important;
 }
 
 .font-alt {
@@ -11187,7 +11187,7 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(#2937f0, #9f1ae2);
+  background: -webkit-linear-gradient(#193538, #3f9188);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11332,10 +11332,10 @@ section.cta:before {
   display: none;
 }
 .features-device-mockup .circle .gradient-start-color {
-  stop-color: #2937f0;
+  stop-color: #3f9188;
 }
 .features-device-mockup .circle .gradient-end-color {
-  stop-color: #9f1ae2;
+  stop-color: #3f9188;
 }
 .features-device-mockup .shape-1 {
   position: absolute;
@@ -11446,10 +11446,10 @@ footer a:focus {
   display: none;
 }
 .masthead .masthead-device-mockup .circle .gradient-start-color {
-  stop-color: #2937f0;
+  stop-color: #3f9188;
 }
 .masthead .masthead-device-mockup .circle .gradient-end-color {
-  stop-color: #9f1ae2;
+  stop-color: #6d936d;
 }
 .masthead .masthead-device-mockup .shape-1 {
   position: absolute;

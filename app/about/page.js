@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import styles from '../../styles/About.module.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import styles from "../../styles/About.module.css";
 
 const AboutPage = () => {
   const handleEmailPress = () => {
@@ -15,7 +15,6 @@ const AboutPage = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>About MPLS Coffee</h1>
 
-        <h2 className={styles.sectionTitle}>What We Do</h2>
         <p className={styles.text}>
           MPLS Coffee is your ultimate guide to discovering and exploring the
           vibrant coffee scene in Minneapolis. Our app helps coffee enthusiasts
