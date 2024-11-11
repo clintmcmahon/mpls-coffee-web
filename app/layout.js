@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 
-        <meta property="og:title" content="{metadata.title}" />
-        <meta property="og:description" content="{metadata.description}" />
+        <meta property="og:title" content={metadata.description} />
+        <meta property="og:description" content={metadata.description} />
         <meta property="og:url" content="https://mplscoffee.com" />
         <meta property="og:type" content="website" />
         <meta
@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
         />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{metadata.title}" />
-        <meta name="twitter:description" content="{metadata.description}" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:image"
           content="https://mplscoffee.com/assets/img/preview.png"
