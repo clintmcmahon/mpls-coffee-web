@@ -1,0 +1,7 @@
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/MPLSCoffee.Web
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/appsettings.json
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/MPLSCoffee.Web.dll
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/MPLSCoffee.Web.deps.json
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/MPLSCoffee.Web.runtimeconfig.json
+/Users/clintmcmahon/Code/projects/mpls-coffee/mpls-coffee-web/MPLSCoffee.Web/bin/Release/net8.0/publish/MPLSCoffee.Web.pdb

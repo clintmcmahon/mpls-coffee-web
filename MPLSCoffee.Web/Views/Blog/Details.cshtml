@@ -1,0 +1,22 @@
+@model MPLSCoffee.Web.Models.BlogPost
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+<div class="row">
+    <div class="col-md-8">
+        @Html.Raw(Model.Content)
+    </div>
+    <div class="col-md-4">
+        <h2>Blog Roll</h2>
+        <ul>
+            @if (ViewBag.BlogPosts != null)
+            {
+                @foreach (var post in ViewBag.BlogPosts)
+                {
+                    <li><a href="@Url.Action("Details", "Blog", new { slug = post.Slug })">@post.Title</a></li>
+                }
+            }
+        </ul>
+    </div>
+</div>

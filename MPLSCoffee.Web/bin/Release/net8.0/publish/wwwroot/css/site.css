@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #f8f9fa;
+}
+
+.masthead {
+  background-color: #f8f9fa;
+  padding-top: 9.5rem;
+  padding-bottom: 5rem;
+}
+
+.app-badge {
+  height: 3rem;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(45deg,#193538,#3f9188) !important;
+}
+
+aside, section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
